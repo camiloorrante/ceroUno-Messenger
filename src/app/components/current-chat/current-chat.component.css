@@ -43,7 +43,6 @@
 }
 
 .mesgs {
-    /* float: left; */
     padding: 5px 15px 0 25px;
     width: 100%;
 }
@@ -52,9 +51,4 @@
     margin-bottom: 20px;
     height: auto;
     overflow-y: auto;
-}
-
-.form-down {
-    position: absolute;
-    bottom: 0;
 }
