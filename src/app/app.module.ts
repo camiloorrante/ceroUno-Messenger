@@ -8,6 +8,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { CurrentChatComponent } from './components/current-chat/current-chat.component';
 import { ChatDetailComponent } from './components/chat-detail/chat-detail.component';
 import { ContactsSettingsComponent } from './components/contacts-settings/contacts-settings.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { ContactsSettingsComponent } from './components/contacts-settings/contac
     CurrentChatComponent,
     ChatDetailComponent,
     ContactsSettingsComponent
-  ],
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
