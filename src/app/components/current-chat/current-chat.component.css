@@ -51,4 +51,11 @@
     margin-bottom: 20px;
     height: auto;
     overflow-y: auto;
-}   
+} 
+
+.user-name{
+    font-size: 16px;
+}
+.header-msn{
+    font-size: 14px;
+}
