@@ -1,3 +1,82 @@
-<p>
-  chat-detail works!
-</p>
+<div class="conainer-fluid">
+  <div id="contacto" class="container">
+    <div class="row">
+      <div id="foto_contacto" class="col-2">
+        <img src="{{persona.fotoPerfil}}" alt="foto de perfil" style="max-width: 50px; border-radius: 50%;">
+      </div>
+      <div id="status_contacto" class="col-8">
+        <h6>
+          <a href="#" class="text-primary">{{persona.nombre}}</a>
+        </h6>
+        <h6 *ngIf="persona.activo" class="text-secondary">Activo</h6>
+      </div>
+      <div class="col-1">
+        <a href="#">
+          <i class="fas fa-cog h5 mt-3 text-secondary"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="opciones" class="container">
+    <div class="btn list-group-item-action pt-2" data-toggle="collapse" href="#options" aria-expanded="true" aria-controls="options">
+      <h6 class="text-secondary">Opciones</h6>
+    </div>
+    <div class="collapse show ml-3" id="options">
+      <div class="pb-2 pt-2">
+        <i class="fas fa-search mr-3 h5 text-primary"></i>
+        <label>Buscar en la conversación</label>
+      </div>
+
+      <div class="pb-2 pt-2">
+        <i class="fas fa-pencil-alt mr-3 h5 text-primary"></i>
+        <label>Editar Apodos</label>
+      </div>
+
+      <div class="pb-2 pt-2">
+        <i class="fas fa-palette mr-3 h5 text-primary"></i>
+        <label>Cambiar color</label>
+      </div>
+
+      <div class="pb-2 pt-2">
+        <i class="fas fa-thumbs-up mr-3 h5 text-primary"></i>
+        <label> Cambiar Emoji</label>
+      </div>
+      <div class="pb-2 pt-2">
+        <i class="far fa-bell mr-3 h5 text-primary"></i>
+        <label>Notificaciones</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="btn list-group-item-action pt-2" data-toggle="collapse" href="#archivos" aria-expanded="true" aria-controls="archivos">
+      <h6 class="text-secondary">Archivos conpartidos</h6>
+    </div>
+    <div class="collapse show ml-3" id="archivos">
+      <ul class="list-group list-group-flush">
+        <a *ngFor="let link of persona.archivos" class="list-group-item-action text-primary h6 pt-2 pb-2" href="#">
+          <i class="{{link.icono}} mr-3 h5 text-primary"></i>{{link.nombre}}</a>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="btn list-group-item-action pt-2" data-toggle="collapse" href="#fotos" aria-expanded="true" aria-controls="fotos">
+      <h6 class="text-secondary">Fotos compartidas</h6>
+    </div>
+    <div class="collapse show row" id="fotos">
+      <div *ngFor="let foto of persona.fotos" class="col-4">
+        <a href="#">
+          <img src="{{foto}}" alt="" class="img-thumbnail" style="min-width: 50px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
