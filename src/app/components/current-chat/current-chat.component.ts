@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-chat.component.css']
 })
 export class CurrentChatComponent implements OnInit {
-
+  texto: String = 'Texto de prueba :D';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sendMsg() {
+    alert('alert');
   }
 
 }
