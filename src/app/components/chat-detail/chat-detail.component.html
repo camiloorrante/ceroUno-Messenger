@@ -5,11 +5,11 @@
     </div>
     <div id="status_contacto" class="col-7">
       <a href="#" class="text-primary contact-name">{{persona.nombre}}</a>
-      <p *ngIf="persona.activo" class="text-secondary">Activo</p>
+      <p *ngIf="persona.activo" class="text-secondary contact-name">Activo</p>
     </div>
     <div class="col-2">
       <a href="#">
-        <i class="fas fa-cog h5 mt-3 text-secondary"></i>
+        <fa name="fas fa-cog mt-3" class="mr-3 h5 text-primary"></fa>
       </a>
     </div>
   </div>
@@ -21,26 +21,26 @@
   </div>
   <div class="collapse show ml-3" id="options">
     <div class="pb-2 pt-2">
-      <i class="fas fa-search mr-3 h5 text-primary"></i>
+      <fa name="fas fa-search" class="mr-3 h5 text-primary"></fa>
       <label class="lbl-details">Buscar en la conversación</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <i class="fas fa-pencil-alt mr-3 h5 text-primary"></i>
+      <fa name="far fa-edit" class="mr-3 h5 text-primary"></fa>
       <label class="lbl-details">Editar Apodos</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <i class="fas fa-palette mr-3 h5 text-primary"></i>
+      <fa name="paint-brush" class="mr-3 h5 text-primary"></fa>
       <label class="lbl-details">Cambiar color</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <i class="fas fa-thumbs-up mr-3 h5 text-primary"></i>
+      <fa name="far fa-thumbs-up" class="mr-3 h5 text-primary"></fa>
       <label class="lbl-details"> Cambiar Emoji</label>
     </div>
     <div class="pb-2 pt-2">
-      <fa name="bell" class="mr-3 h5 text-primary"></fa>
+      <fa name="far fa-bell" class="mr-3 h5 text-primary"></fa>
       <label class="lbl-details">Notificaciones</label>
     </div>
   </div>
@@ -53,7 +53,8 @@
   <div class="collapse show ml-3" id="archivos">
     <ul class="list-group list-group-flush archivos-compartidos">
       <a *ngFor="let link of persona.archivos" class="list-group-item-action text-primary" href="#">
-        <i class="{{link.icono}} mr-3 h5 text-primary"></i>{{link.nombre}}</a>
+          <fa name="{{link.icono}}" class="mr-3 h5 text-primary"></fa>
+          {{link.nombre}}</a>
     </ul>
   </div>
 
