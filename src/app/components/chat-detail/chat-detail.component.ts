@@ -11,8 +11,8 @@ export class ChatDetailComponent implements OnInit {
     fotoPerfil: "https://avatars2.githubusercontent.com/u/20422389?s=460&v=4",
     activo: true,
     archivos: [
-      {nombre:"Libro.doc", icono:"far fa-file-word"},
-      {nombre:"Libro.pdf", icono:"far fa-file-pdf"}
+      {nombre:"Libro.doc", icono:"file-word-o"},
+      {nombre:"Libro.pdf", icono:"file-pdf-o"}
     ],
     fotos: [
       "https://admin.kienyke.com/wp-content/uploads/2018/03/Bukousky.png",
