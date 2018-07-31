@@ -5,7 +5,10 @@
     </div>
     <div id="status_contacto" class="col-7">
       <a href="#" class="text-primary contact-name">{{persona.nombre}}</a>
-      <p *ngIf="persona.activo" class="text-secondary contact-name">Activo</p>
+      <p *ngIf="persona.activo; else inactivo" class="text-success contact-name"><span class="badge badge-success">Activo</span></p>
+      <ng-template #inactivo>
+        <p class="text-secondary contact-name"><span class="badge badge-secondary">Inactivo</span></p>       
+      </ng-template>
     </div>
     <div class="col-2">
       <a href="#">

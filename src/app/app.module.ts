@@ -10,6 +10,7 @@ import { ChatDetailComponent } from './components/chat-detail/chat-detail.compon
 import { ContactsSettingsComponent } from './components/contacts-settings/contacts-settings.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
+import { StatusDirective } from './directivas/status.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ConversationComponent } from './components/conversation/conversation.co
     CurrentChatComponent,
     ChatDetailComponent,
     ContactsSettingsComponent,
-    ConversationComponent
+    ConversationComponent,
+    StatusDirective
   ],
   imports: [
     BrowserModule,

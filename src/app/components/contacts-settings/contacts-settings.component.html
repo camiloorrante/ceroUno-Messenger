@@ -1,11 +1,21 @@
 <div class="continer-flex">
   <div class="row bg-light text-dark border">
     <div class="col-3">
-      
-      <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-        popoverTitle="Popover on bottom">
+
+      <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbPopover="Activo" popoverTitle="Estatus">
         <fa name="cog"></fa>
-      </button>
+      </button> -->
+
+      <div class="dropdown">
+        <button appStatus class="btn status" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <fa name="cog"></fa>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item status_style">Activo</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="col-6">

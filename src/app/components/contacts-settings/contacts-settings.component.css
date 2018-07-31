@@ -1,6 +1,7 @@
 button{
     border-color:transparent;
 }
-#mesh{
-    
+
+status{
+    color:green !important;
 }
