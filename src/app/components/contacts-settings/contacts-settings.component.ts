@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts-settings.component.css']
 })
 export class ContactsSettingsComponent implements OnInit {
-
+  currentColor = 'green';
   constructor() { }
 
   ngOnInit() {
+  }
+
+   setColor( color: string) {
+    this.currentColor = color;
   }
 
 }

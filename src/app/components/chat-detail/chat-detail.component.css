@@ -11,3 +11,6 @@ hr{
     font-size: 12px;
     
 }
+.full{
+    min-height: 100%;
+}

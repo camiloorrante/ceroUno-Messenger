@@ -1,6 +1,22 @@
 button{
     border-color:transparent;
 }
-#mesh{
-    
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  ul{
+      margin-top: 60px;
+      list-style: none;
+      padding-left: 0;
+  }
+
+  ul > li{
+      width: 100%;
+  }
+  ul > li > a{
+    width: 100%;
 }
