@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Conversacion } from '../../models/conversacion';
 
 @Component({
   selector: 'app-contacts-settings',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsSettingsComponent implements OnInit {
   currentColor = 'green';
+  searchConversaton: string;
+  @Input() conversaciones;
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +17,13 @@ export class ContactsSettingsComponent implements OnInit {
 
    setColor( color: string) {
     this.currentColor = color;
+  }
+
+  filterConversations(e) {
+    this.conversaciones = this.conversaciones.filter(
+        (s) =>
+          s.nombre.includes(this.searchConversaton)
+        );
   }
 
 }

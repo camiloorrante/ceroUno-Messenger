@@ -65,3 +65,6 @@
 .full{
     height: 100%;
 }
+.max-largo{
+    max-width: 100%;
+}

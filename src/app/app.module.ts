@@ -11,6 +11,8 @@ import { ContactsSettingsComponent } from './components/contacts-settings/contac
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ConversationComponent } from './components/conversation/conversation.co
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

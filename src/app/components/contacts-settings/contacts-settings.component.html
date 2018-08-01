@@ -29,8 +29,13 @@
             <fa name="fas fa-search"></fa>
           </span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <input type="text" class="form-control" 
+          aria-label="Search" 
+          aria-describedby="inputGroup-sizing-sm" 
+          [(ngModel)]="searchConversaton"
+          (ngModelChange)="filterConversations($event)"/>
       </div>
     </div>
   </div>
 </div>
+<app-conversations [conversaciones]="conversaciones"></app-conversations>
