@@ -1,19 +1,24 @@
-<div class="continer-flex">
+<div class="continer-fluid">
   <div class="row bg-light text-dark border">
-    <div class="col-3">
-      
-      <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-        popoverTitle="Popover on bottom">
-        <fa name="cog"></fa>
-      </button>
+    <div class="col-4">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-secondary" id="estadosDropDown" ngbDropdownToggle>
+          <fa name="cog"></fa>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="estadosDropDown">
+          <button class="btn btn-light dropdown-item" (click)="setColor('green');">Online</button>
+          <button class="btn btn-light dropdown-item" (click)="setColor('gray');">Offline</button>
+          <button class="btn btn-light dropdown-item" (click)="setColor('red');">Busy</button>
+        </div>
+        <span [ngStyle]="{'background-color':currentColor}" class="dot"></span>
+      </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-5 mx-auto">
       <h3 class="_1tqi">Messenger</h3>
     </div>
     <div class="col-3">
-      <button type="button" class="btn btn-outline-secondary mr-2 pull-right" placement="bottom" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-        popoverTitle="fas fa-edit">
+      <button type="button" class="btn btn-outline-secondary mr-2 pull-right">
         <fa name="far fa-edit"></fa>
       </button>
     </div>

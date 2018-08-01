@@ -45,6 +45,8 @@
 .mesgs {
     padding: 5px 15px 0 25px;
     width: 100%;
+    height: 90%;
+    overflow-y: scroll;
 }
 
 .msg_history {
@@ -58,4 +60,7 @@
 }
 .header-msn{
     font-size: 14px;
+}
+.full{
+    height: 100%;
 }
