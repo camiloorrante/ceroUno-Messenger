@@ -1,3 +1,16 @@
 <div class="container-flex">
-    <app-conversation></app-conversation>
+    <div *ngFor="let c of conversaciones" class="row mt-4">
+        <div class="col-2">
+            <img src="{{c.foto}}" alt="">
+        </div>
+        <div class="col-10">
+            <div class="col-12">
+                <span class="name">{{c.nombre}}</span>
+                <span class="hour float-right text-secondary textsecondarys">11:53 am</span>
+            </div>
+            <div class="col-12 text-secondary">
+                {{c.abstract}}
+            </div>
+        </div>
+    </div>
 </div>

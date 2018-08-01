@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conversation.component.css']
 })
 export class ConversationComponent implements OnInit {
-
+  conversacion:object;
   constructor() { }
 
   ngOnInit() {
