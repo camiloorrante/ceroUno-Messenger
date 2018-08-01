@@ -1,5 +1,5 @@
 <div class="container-flex">
-    <div *ngFor="let c of conversaciones | filtro: buscar" class="row mt-4">
+    <div *ngFor="let c of conversaciones | filtro: buscar" class="row mt-4 list-group-item-action conver-link" routerLink="/mensajes/{{c.nombre}}">
         <div class="col-2">
             <img src="{{c.foto}}" alt="">
         </div>

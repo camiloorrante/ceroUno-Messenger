@@ -6,3 +6,6 @@ img{
 .textsecondarys{
     font-size: 12px;
 }
+.conver-link{
+    cursor: pointer;
+}
