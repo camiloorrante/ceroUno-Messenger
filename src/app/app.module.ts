@@ -13,8 +13,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
 
-import { FormsModule } from '@angular/forms';
-
 @NgModule({
   declarations: [
     AppComponent,
