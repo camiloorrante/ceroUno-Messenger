@@ -10,12 +10,13 @@ export class ContactsSettingsComponent implements OnInit {
   currentColor = 'green';
   searchConversaton: string;
   @Input() conversaciones;
+  @Input() contacto: string;
   constructor() { }
 
   ngOnInit() {
   }
 
-   setColor( color: string) {
+  setColor(color: string) {
     this.currentColor = color;
   }
 

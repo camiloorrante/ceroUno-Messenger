@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ChatDetailComponent } from './components/chat-detail/chat-detail.compon
 import { ContactsSettingsComponent } from './components/contacts-settings/contacts-settings.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
 
 import { FormsModule } from '@angular/forms';
 
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     CurrentChatComponent,
     ChatDetailComponent,
     ContactsSettingsComponent,
-    ConversationComponent
+    ConversationComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,

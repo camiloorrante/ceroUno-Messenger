@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ConversationsComponent implements OnInit {
   @Input() conversaciones;
+  @Input() buscar: string;
+
   constructor() { }
 
   ngOnInit() {
