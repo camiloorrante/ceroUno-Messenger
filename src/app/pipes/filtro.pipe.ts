@@ -10,7 +10,10 @@ export class FiltroPipe implements PipeTransform {
       return conversaciones;
     }
 
-    return conversaciones.filter(item => item.nombre.indexOf(filter) !== -1);
+    return conversaciones.filter(
+      (s) =>
+          s.nombre.toLowerCase().includes(filter)
+    );
   }
 
 }

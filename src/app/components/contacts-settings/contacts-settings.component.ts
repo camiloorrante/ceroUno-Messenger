@@ -8,7 +8,6 @@ import { Conversacion } from '../../models/conversacion';
 })
 export class ContactsSettingsComponent implements OnInit {
   currentColor = 'green';
-  searchConversaton: string;
   @Input() conversaciones;
   @Input() contacto: string;
   constructor() { }
@@ -18,13 +17,6 @@ export class ContactsSettingsComponent implements OnInit {
 
   setColor(color: string) {
     this.currentColor = color;
-  }
-
-  filterConversations(e) {
-    this.conversaciones = this.conversaciones.filter(
-        (s) =>
-          s.nombre.includes(this.searchConversaton)
-        );
   }
 
 }
