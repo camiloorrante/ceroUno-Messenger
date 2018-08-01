@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ChatDetailComponent } from './components/chat-detail/chat-detail.compon
 import { ContactsSettingsComponent } from './components/contacts-settings/contacts-settings.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { ConversationComponent } from './components/conversation/conversation.co
     CurrentChatComponent,
     ChatDetailComponent,
     ContactsSettingsComponent,
-    ConversationComponent
+    ConversationComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
