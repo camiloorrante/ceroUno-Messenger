@@ -68,3 +68,8 @@
 .max-largo{
     max-width: 100%;
 }
+
+.barra-enviar{
+    position: absolute;
+    bottom: 0;
+}
