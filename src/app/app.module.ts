@@ -14,6 +14,7 @@ import { ConversationComponent } from './components/conversation/conversation.co
 import { FiltroPipe } from './pipes/filtro.pipe';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { MessagesService } from './services/messages.service';
+import {NgxAutoScrollModule} from 'ngx-auto-scroll';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MessagesService } from './services/messages.service';
     AppRoutingModule,
     NgbModule.forRoot(),
     AngularFontAwesomeModule,
-    FormsModule
+    FormsModule,
+    NgxAutoScrollModule
   ],
   providers: [MessagesService],
   bootstrap: [AppComponent]
