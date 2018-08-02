@@ -68,3 +68,12 @@
 .max-largo{
     max-width: 100%;
 }
+
+.nine {
+    width: 90%;
+}
+
+.h90 {
+    height: 500px;  
+    overflow-y: auto;
+}

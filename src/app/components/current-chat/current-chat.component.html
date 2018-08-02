@@ -7,14 +7,14 @@
 
   <div class="row max-largo">
     <div class="col-9 border-right mt-3">
-
-      <div class="container-fluid">
-        <div class="col-12 clearfix mt-1" *ngFor="let m of messagesService.getMessages()">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            {{ m.message }}
-          </p>
-        </div>
-        <!-- 
+      <div class="h90">
+        <div class="container-fluid">
+          <div class="col-12 clearfix mt-1" *ngFor="let m of messagesService.getMessages()">
+            <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
+              {{ m.message }}
+            </p>
+          </div>
+          <!-- 
         <div class="col-12 clearfix">
           <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
             Lorem Ipsum
@@ -40,16 +40,15 @@
             Lorem Ipsum dolor asimet olaoloa
           </p>
         </div> -->
+        </div>
       </div>
       <hr>
 
       <div class="form-group form-inline m-2">
-        <input type="text" 
-               class="form-control w-75" 
-               placeholder="Ingresa Mensaje"
-               [(ngModel)]="message" 
-               (keyup.enter)="sendMessage()">
-        <button class="btn btn-primary form-inline w-25" (keyup.enter)="sendMessage()">Enviar</button>
+        <input type="text" class="form-control nine" placeholder="Ingresa Mensaje" [(ngModel)]="message" (keyup.enter)="sendMessage()">
+        <div class="mx-auto">
+          <fa name="far fa-thumbs-up" class="h5 text-primary"></fa>
+        </div>
       </div>
     </div>
 
