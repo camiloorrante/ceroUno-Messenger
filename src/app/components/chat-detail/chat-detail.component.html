@@ -4,12 +4,15 @@
       <img src="{{persona.fotoPerfil}}" alt="foto de perfil" style="max-width: 50px; border-radius: 50%;">
     </div>
     <div id="status_contacto" class="col-7">
-      <a href="#" class="text-primary contact-name">{{persona.nombre}}</a>
-      <p *ngIf="persona.activo" class="text-secondary contact-name">Activo</p>
+      <a href="#" class="text-facebook contact-name">{{persona.nombre}}</a>
+      <p *ngIf="persona.activo; else inactivo" class="status badge badge-pill badge-success">Activo</p>
+      <ng-template #inactivo>
+        <p class="status badge badge-pill badge-secondary">Inactivo</p>
+      </ng-template>
     </div>
     <div class="col-2">
       <a href="#">
-        <fa name="fas fa-cog mt-3" class="mr-3 h5 text-primary"></fa>
+        <fa name="fas fa-cog mt-3" class="mr-3 h5 text-facebook"></fa>
       </a>
     </div>
   </div>
@@ -21,26 +24,26 @@
   </div>
   <div class="collapse show ml-3" id="options">
     <div class="pb-2 pt-2">
-      <fa name="fas fa-search" class="mr-3 h5 text-primary"></fa>
+      <fa name="fas fa-search" class="mr-3 h5 text-facebook"></fa>
       <label class="lbl-details">Buscar en la conversación</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <fa name="far fa-edit" class="mr-3 h5 text-primary"></fa>
+      <fa name="far fa-edit" class="mr-3 h5 text-facebook"></fa>
       <label class="lbl-details">Editar Apodos</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <fa name="paint-brush" class="mr-3 h5 text-primary"></fa>
+      <fa name="paint-brush" class="mr-3 h5 text-facebook"></fa>
       <label class="lbl-details">Cambiar color</label>
     </div>
 
     <div class="pb-2 pt-2">
-      <fa name="far fa-thumbs-up" class="mr-3 h5 text-primary"></fa>
+      <fa name="far fa-thumbs-up" class="mr-3 h5 text-facebook"></fa>
       <label class="lbl-details"> Cambiar Emoji</label>
     </div>
     <div class="pb-2 pt-2">
-      <fa name="far fa-bell" class="mr-3 h5 text-primary"></fa>
+      <fa name="far fa-bell" class="mr-3 h5 text-facebook"></fa>
       <label class="lbl-details">Notificaciones</label>
     </div>
   </div>
@@ -52,8 +55,8 @@
   </div>
   <div class="collapse show ml-3" id="archivos">
     <ul class="list-group list-group-flush archivos-compartidos">
-      <a *ngFor="let link of persona.archivos" class="list-group-item-action text-primary" href="#">
-          <fa name="{{link.icono}}" class="mr-3 h5 text-primary"></fa>
+      <a *ngFor="let link of persona.archivos" class="list-group-item-action text-facebook" href="#">
+          <fa name="{{link.icono}}" class="mr-3 h5 text-facebook"></fa>
           {{link.nombre}}</a>
     </ul>
   </div>

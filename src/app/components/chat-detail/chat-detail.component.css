@@ -1,6 +1,10 @@
 .contact-name{
     font-size: 12px;
 }
+
+.status{
+    font-size: 10px;
+}
 .lbl-details{
     font-size: 12px;
 }
@@ -13,4 +17,8 @@ hr{
 }
 .full{
     min-height: 100%;
+}
+
+.text-facebook{
+    color: #05728f;
 }
