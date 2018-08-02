@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MessagesService } from '../../services/messages.service';
 
 @Component({
   selector: 'app-current-chat',
@@ -6,14 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-chat.component.css']
 })
 export class CurrentChatComponent implements OnInit {
-  texto: String = 'Texto de prueba :D';
-  constructor() { }
+  message: string;
+  nombre: string;
+  constructor(private route: ActivatedRoute,
+              private messagesService: MessagesService) {
+  }
 
   ngOnInit() {
+      // subscribe to the parameters observable
+    this.route.paramMap.subscribe(params => {
+      this.nombre = params.get('nombre');
+      console.log(params.get('nombre'));
+    });
+    this.messagesService.getMessages();
   }
 
-  sendMsg() {
-    alert('alert');
+  sendMessage() {
+    this.messagesService.sendMessage( this.message );
+    this.message = '';
   }
+
+
 
 }

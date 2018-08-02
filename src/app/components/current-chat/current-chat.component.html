@@ -1,7 +1,7 @@
 <div class="container-fuid border full h-100">
 
   <div class="center-block border-bottom">
-    <h5 class="user-name text-center">~ Usuario ~</h5>
+    <h5 class="user-name text-center">~ {{nombre}} ~</h5>
     <h6 class="header-msn text-center">Messenger</h6>
   </div>
 
@@ -9,11 +9,12 @@
     <div class="col-9 border-right mt-3">
 
       <div class="container-fluid">
-        <div class="col-12 clearfix">
+        <div class="col-12 clearfix mt-1" *ngFor="let m of messagesService.getMessages()">
           <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
+            {{ m.message }}
           </p>
         </div>
+        <!-- 
         <div class="col-12 clearfix">
           <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
             Lorem Ipsum
@@ -38,13 +39,17 @@
           <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
             Lorem Ipsum dolor asimet olaoloa
           </p>
-        </div>
+        </div> -->
       </div>
       <hr>
 
       <div class="form-group form-inline m-2">
-        <input type="text" class="form-control w-75" placeholder="Ingresa Mensaje">
-        <button class="btn btn-primary form-inline w-25" (click)="sendMsg()">Enviar</button>
+        <input type="text" 
+               class="form-control w-75" 
+               placeholder="Ingresa Mensaje"
+               [(ngModel)]="message" 
+               (keyup.enter)="sendMessage()">
+        <button class="btn btn-primary form-inline w-25" (keyup.enter)="sendMessage()">Enviar</button>
       </div>
     </div>
 
