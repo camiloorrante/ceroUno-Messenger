@@ -13,6 +13,8 @@ import { ContactsSettingsComponent } from './components/contacts-settings/contac
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ConversationComponent } from './components/conversation/conversation.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { MessagesService } from './services/messages.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     ChatDetailComponent,
     ContactsSettingsComponent,
     ConversationComponent,
-    FiltroPipe
+    FiltroPipe,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

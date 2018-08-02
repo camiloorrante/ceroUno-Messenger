@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MensajesService } from '../../services/mensajes.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-current-chat',
@@ -7,12 +8,16 @@ import { MensajesService } from '../../services/mensajes.service';
   styleUrls: ['./current-chat.component.css']
 })
 export class CurrentChatComponent implements OnInit {
-  texto: String = 'Texto de prueba :D';
   mensajes: any[];
   mensaje: string;
-  constructor(private mensajeServices: MensajesService) { }
+  nombre:string;
+  constructor(private mensajeServices: MensajesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.nombre = params.get('nombre');
+      console.log(params.get('nombre'));
+    });
     this.mensajes = this.mensajeServices.getMensaje();
   }
 
@@ -20,5 +25,4 @@ export class CurrentChatComponent implements OnInit {
     this.mensajeServices.postMensaje(this.mensaje);
     this.mensaje = '';
   }
-
 }
