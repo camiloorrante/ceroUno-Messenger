@@ -9,37 +9,21 @@
     <div class="col-9 border-right mt-3">
       <div class="h90">
         <div class="container-fluid">
+          
+          <!-- Div para mensaje enviado -->
           <div class="col-12 clearfix mt-1" *ngFor="let m of messagesService.getMessages()">
-            <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
+            <p class="float-right sent_msg" placement="left" ngbTooltip="13:33am">
               {{ m.message }}
             </p>
           </div>
-          <!-- 
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum dolor asimet olaoloa
-          </p>
-        </div> -->
+          <!-- Div para mensaje entrante -->
+          <div class="col-12 clearfix mt-1">
+            <img class="float-left img_rec" src="https://picsum.photos/200/200/?random" alt="">
+            <p class="float-left received_msg" placement="right" ngbTooltip="13:33am">
+              Lorem izq
+            </p>
+          </div>
+          
         </div>
       </div>
       <hr>

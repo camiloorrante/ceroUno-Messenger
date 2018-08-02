@@ -77,3 +77,8 @@
     height: 500px;  
     overflow-y: auto;
 }
+
+.img_rec {
+    max-width: 35px; 
+    border-radius: 50%;
+}
