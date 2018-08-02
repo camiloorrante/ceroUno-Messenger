@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MensajesService } from './services/mensajes.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,9 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     AngularFontAwesomeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MensajesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

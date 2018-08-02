@@ -9,35 +9,15 @@
     <div class="col-9 border-right mt-3">
 
       <div class="container-fluid">
-        <div class="col-12 clearfix">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
+        <div class="col-12 clearfix mb-2" *ngFor="let mensaje of mensajes">
+          <p *ngIf="mensaje.from=='me' else contact" class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
+            {{mensaje.mensaje}}
           </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-right sent_msg" placement="right" ngbTooltip="13:33am">
-            Lorem Ipsum
-          </p>
-        </div>
-        <div class="col-12 clearfix">
-          <p class="float-left received_msg" placement="left" ngbTooltip="13:33am">
-            Lorem Ipsum dolor asimet olaoloa
-          </p>
+          <ng-template #contact>
+            <p class="float-left recived_msg" placement="left" ngbTooltip="13:33am">
+              {{mensaje.mensaje}}
+            </p>
+          </ng-template>
         </div>
       </div>
 
@@ -45,10 +25,11 @@
         <input type="text" class="form-control w-75" placeholder="Ingresa Mensaje">
         <button class="btn btn-primary form-inline w-25" (click)="sendMsg()">Enviar</button>
       </div> -->
-      <div class="input-group mb-3 ml-2 barra-enviar">
-        <input type="text" class="form-control" placeholder="Escriba un mensaje..." aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div class="input-group mb-3 ml-2 mt-3">
+        <input type="text" class="form-control" placeholder="Escriba un mensaje..." [(ngModel)]="mensaje" (keydown.enter)="postMensaje()"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
+          <button class="btn btn-outline-primary" type="button" id="button-addon2" (click)="postMensaje()">Enviar</button>
         </div>
       </div>
     </div>

@@ -15,6 +15,14 @@
     color:#fff;
     padding: 5px 10px 5px 12px;
   }
+  .recived_msg {
+    background: #f1f0f0 none repeat scroll 0 0;
+    border-radius: 1.3em;
+    font-size: 14px;
+    margin: 0; 
+    color: back;
+    padding: 5px 10px 5px 12px;
+  }
 .received_msg{
     background: #F1F0F0 none repeat scroll 0 0;
     border-radius: 1.3em;
@@ -67,9 +75,4 @@
 }
 .max-largo{
     max-width: 100%;
-}
-
-.barra-enviar{
-    position: absolute;
-    bottom: 0;
 }
